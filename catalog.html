@@ -58,21 +58,31 @@
           <li class="basket active">
             <a href="#">2 товара</a>
             <div class="modal-basket">
-              <table class="order">
+              <table class="basket-order">
                 <tr>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5кг x <span>200 руб.</span></td>
+                  <td class="basket-order-remove">
+                    <button class="basket-remove-btn" type="button">Удалить из корзины</button>
+                  </td>
+                  <td class="basket-order-image">
+                    <img src="img/basket-icecream-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                  </td>
+                  <td class="basket-item-name">Пломбир с апельсиновым джемом</td>
+                  <td class="basket-item-price">1,5кг x <span>200 руб.</span></td>
                   <td>300 руб.</td>
                 </tr>
                 <tr>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>1,5кг x <span>300 руб.</span></td>
+                  <td class="basket-order-remove">
+                    <button class="basket-remove-btn" type="button">Удалить из корзины</button>
+                  </td>
+                  <td class="basket-order-image">
+                    <img src="img/basket-icecream-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  </td>
+                  <td class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="basket-item-price">1,5кг x <span>300 руб.</span></td>
                   <td>450 руб.</td>
                 </tr>
-                <tr>
-                  <td>Итого: 750 руб.</td>
-                </tr>
               </table>
+              <b>Итого: 750 руб.</b>
               <a class="button" href="#">Оформить заказ</a>
             </div>
           </li>
@@ -166,7 +176,7 @@
           </ul>
         </fieldset>
 
-        <button class="button" type="submit">Применить</button>
+        <button class="catalog-filter-btn" type="submit">Применить</button>
       </form>
       <!-- Конец формы -->
 
@@ -299,7 +309,7 @@
         </ul>
         <p class="copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/htmlacademy.svg" height="39" width="108" alt="HTML Academy логотип">
+            <img src="img/logo-htmlacademy.svg" height="39" width="108" alt="HTML Academy логотип">
           </a>
           Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2018
         </p>
