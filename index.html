@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -31,26 +32,24 @@
 
         <ul class="user-navigation">
           <li class="search">
-            <a href="#">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </a>
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
+            <a href="#" aria-label="Поиск по сайту"></a>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
               <label class="visually-hidden" for="search-field">Поиск, введите запрос</label>
               <input type="text" name="search" id="search-field" placeholder="Что ищем?">
             </form>
           </li>
           <li class="login">
-            <a href="#">
-              <span class="visually-hidden">Вход в учетную запись</span>
-            </a>
+            <a href="#" aria-label="Вход в учетную запись"></a>
             <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
               <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
               <input type="text" name="email" id="email-field" placeholder="Электронная почта" required>
               <label class="visually-hidden" for="password-field">Введите пароль</label>
               <input type="password" name="password" id="password-field" placeholder="Пароль" required>
               <button class="button" type="submit">Войти</button>
-              <a class="modal-link" href="#">Забыли пароль?</a>
-              <a class="modal-link" href="#">Новая регистрация</a>
+              <div class="login-links">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
             </form>
           </li>
           <li class="basket">
@@ -68,7 +67,7 @@
     <main class="main-content">
       <h1 class="visually-hidden">Глейси - магазин по продаже мороженого</h1>
       <section class="slider">
-        <h2 class="offers">Лучшие предложения</h2>
+        <h2 class="visually-hidden">Лучшие предложения</h2>
         <div class="controls">
             <label><input class="visually-hidden" type="radio" id="slide-1" name="slider" checked></label>
             <label><input class="visually-hidden" type="radio" id="slide-2" name="slider"></label>
@@ -174,17 +173,17 @@
   </div>
 
   <div class="page-wrapper">
-      <footer class="footer">
-        <div class="contacts-info">
-          <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-          <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-          <a class="button" href="#">Форма обратной связи</a>
-        </div>
+    <footer class="footer">
+      <div class="contacts-info">
+        <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+        <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
+        <a class="button" href="#">Форма обратной связи</a>
+      </div>
       <ul class="socials">
-        <li><a class="social social-tw" href="#" aria-label="Твиттер"></a></li>
-        <li><a class="social social-inst" href="#" aria-label="Инстаграм"></a></li>
-        <li><a class="social social-fb" href="#" aria-label="Фейсбук"></a></li>
-        <li><a class="social social-vk" href="#" aria-label="Вконтакте"></a></li>
+        <li><a class="social social-tw" href="#" aria-label="Глейси в Твиттер"></a></li>
+        <li><a class="social social-inst" href="#" aria-label="Глейси в Инстаграм"></a></li>
+        <li><a class="social social-fb" href="#" aria-label="Глейси в Фейсбук"></a></li>
+        <li><a class="social social-vk" href="#" aria-label="Глейси в Вконтакте"></a></li>
       </ul>
       <ul class="useful-info">
         <li class="mark"><a href="#">Для поставщиков</a></li>
@@ -201,7 +200,8 @@
     </footer>
 
     <div class="modal-feedback">
-        <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+      <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+      <form action="https://echo.htmlacademy.ru" method="POST">
         <label class="visually-hidden" for="name-field">Ваше имя</label>
         <input type="text" name="name" id="name-field" placeholder="Как вас зовут?">
 
@@ -210,8 +210,13 @@
 
         <label class="visually-hidden" for="comment-field">Оставьте комментарий</label>
         <textarea name="comment" id="comment-field" cols="10" rows="10" placeholder="Напишите что-нибудь..."></textarea>
-        <button class="button" type="submit">Отправить</button>
-      </div>
+
+        <button class="button feedback-btn" type="submit">Отправить</button>
+      </form>
+
+      <button class="feedback-close" type="button">Закрыть</button>
+
+    </div>
   </div>
 </body>
 </html>
