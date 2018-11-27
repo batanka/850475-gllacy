@@ -1,0 +1,467 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #849d8f; /*Временно, до стилизации слайдера*/
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.button {
+  padding: 14px;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  vertical-align: middle;
+
+  background: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 2px 2px 0px #942718;
+  border: none;
+  border-radius: 30px;
+}
+
+.button:hover,
+.button:focus {
+  background: #ee7561;
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0px #942718;
+}
+
+.main-navigation {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.site-navigation,
+.submenu,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigation-item {
+  display: inline-block; /*УДАЛИТЬ*/
+}
+
+.navigation-item a {
+  padding: 10px 14px;
+  border-radius: 20px;
+}
+
+.navigation-item > a:active {
+  color: #323232;
+  background-color: #f8f7f4;
+  box-shadow: inset 0px 2px 1px 0px #696969;
+}
+
+.navigation-item.active > a {
+  background-color: #d07058;
+}
+
+.navigation-item > a:hover,
+.search > a:hover,
+.login > a:hover,
+.basket > a:hover,
+.navigation-item > a:focus,
+.search > a:focus,
+.login > a:focus,
+.basket > a:focus{
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.submenu {
+  margin: 0;
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #f8f7f4;
+  border-radius: 8px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.submenu-item {
+  padding: 7px 7px;
+  font-weight: 400;
+}
+
+.submenu a {
+  color: #323232;
+}
+
+.submenu-item.active {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.submenu-item.active a {
+  color: #ffffff;
+}
+
+.submenu-item:hover {
+  background-color: #fbded7;
+}
+
+.submenu-item:active {
+  background-color: #f6b5a5;
+}
+
+.submenu-item.active:hover a {
+  color: #323232;
+}
+
+.user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.search input[type="text"],
+.login input[type="text"],
+.login input[type="password"],
+.subscribe input[type="email"],
+.modal-feedback input[type="text"],
+.modal-feedback input[type="email"],
+.modal-feedback textarea {
+  box-sizing: border-box;
+  padding: 15px;
+
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.search input[type="text"] {
+  height: 44px;
+  width: 311px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  width: 241px;
+  height: 44px;
+}
+
+.subscribe input[type="email"] {
+  height: 44px;
+  width: 368px;
+}
+
+.modal-feedback input[type="text"],
+.modal-feedback input[type="email"] {
+  width: 267px;
+  height: 44px;
+}
+
+.modal-feedback textarea {
+  resize: none;
+  width: 428px;
+  height: 155px;
+}
+
+.search input[type="text"]:hover,
+.login input[type="text"]:hover,
+.login input[type="password"]:hover,
+.subscribe input[type="email"]:hover,
+.modal-feedback input[type="text"]:hover,
+.modal-feedback input[type="email"]:hover,
+.modal-feedback textarea:hover {
+  border: 2px solid #c7c6c5;
+}
+
+.login > a,
+.basket > a {
+  padding: 10px 17px 10px 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.login-form {
+  padding: 20px 18px;
+  width: 277px;
+
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.login-button {
+  padding: 15px 25px;
+}
+
+.login-links a {
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+}
+
+.login-links a:hover,
+.login-links a:active {
+  color: #e84d37;
+}
+
+.basket.active > a {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.schedule-info {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.schedule-info a {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.slider-text {
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  line-height: 61px;
+  font-weight: 700;
+}
+
+.slider-button {
+  padding: 13px 39px;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.special-banner {
+  width: 560px;
+  min-height: 230px;
+
+  border-radius: 15px;
+}
+
+.special-banner-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.special-banner.raspberry {
+  background: #931c36 url(../img/raspberry-bg.jpg) no-repeat;
+}
+
+.special-banner.chocolates {
+  background: #40261a url(../img/shocolates-bg.jpg) no-repeat;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-image img {
+  border-radius: 50%;
+}
+
+.catalog-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.catalog-item-price span {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.catalog-item-title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.about {
+  padding: 30px 20px;
+
+  color: #323232;
+  background: #eee3cd url(../img/waffle-pattern.jpg);
+  border-radius: 15px;
+}
+
+.about-title {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.about-item {
+  padding-left: 55px;
+  max-width: 480px;
+}
+
+.new {
+  padding: 20px;
+  width: 520px;
+  min-height: 180px;
+  color: #323232;
+  background: #ffffff url(../img/strawberry-bg.jpg) center center no-repeat;
+  border-radius: 15px;
+}
+
+.new-title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.new-link {
+  width: 280px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+  text-decoration: underline;
+}
+
+.new-link:hover,
+.new-link:focus,
+.new-link:active {
+  color: #e84d37;
+}
+
+.subscribe {
+  padding: 20px; /*Пересчитать*/
+  width: 520px; /*Пересчитать*/
+  min-height: 180px; /*Пересчитать*/
+
+  background: #f8f7f4;
+  color: #5a5a5a;
+
+  border-radius: 15px;
+}
+
+.map {
+  background-color: #e4ddc3;
+}
+
+.contacts-info {
+  width: 252px;
+  padding: 32px 26px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.contacts-info b {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.contacts-info-btn {
+  padding: 11px 27px;
+}
+
+.socials {
+  list-style: none;
+}
+
+.useful-info {
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.mark {
+  font-weight: 700;
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.useful-info a:hover,
+.useful-info a:focus,
+.useful-info a:active,
+.copyright a:hover,
+.copyright a:focus,
+.copyright a:active {
+  color: #ffbc9e;
+}
+
+.modal-feedback {
+  padding: 20px 24px;
+
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 15px;
+}
+
+.feedback-title {
+  padding: 0;
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+/*Страница каталога*/
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+
+  list-style: none;
+}
+
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus,
+.breadcrumbs-link:active {
+  color: #ffbc9e;
+}
+
+.main-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
