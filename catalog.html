@@ -41,7 +41,7 @@
             </form>
           </li>
           <li class="login">
-            <a href="#" aria-label="Вход в учетную запись">Вход</a>
+            <a href="#">Вход</a>
             <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
               <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
               <input type="text" name="email" id="email-field" placeholder="Электронная почта" required>
@@ -124,7 +124,7 @@
 
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Жирность:</legend>
-            <ul class="catalog-list catalog-radio-list">
+            <ul class="catalog-filter-list catalog-radio-list">
               <li class="catalog-radio-item">
                 <input class="visually-hidden" type="radio" name="fat" id="zero" value="0">
                 <label class="catalog-filter-label" for="zero">0%</label>
@@ -149,7 +149,7 @@
 
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Наполнители:</legend>
-            <ul class="catalog-list catalog-checkbox-list">
+            <ul class="catalog-filter-list catalog-checkbox-list">
               <li class="catalog-chekbox-item">
                 <input class="visually-hidden" type="checkbox" name="chocolate-filler" id="chocolate" checked>
                 <label class="catalog-filter-label" for="chocolate">шоколадные</label>
@@ -311,11 +311,11 @@
 
       <ul class="pagination-list">
         <li><a class="pagination-button prev disabled" aria-label="Предыдущая"></a></li>
-        <li><a>1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
+        <li class="pagination-item active"><a>1</a></li>
+        <li class="pagination-item"><a href="#">2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">4</a></li>
+        <li class="pagination-item"><a href="#">5</a></li>
         <li><a class="pagination-button forward active" aria-label="Следующая"></a></li>
       </ul>
     </main>
