@@ -79,6 +79,7 @@ a {
   box-shadow: 0px 2px 2px 0px #942718;
   border: none;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -105,6 +106,10 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+li.active > a {
+  pointer-events: none;
 }
 
 .navigation-item > a {
@@ -152,13 +157,9 @@ a {
   color: #323232;
 }
 
-.submenu-item.active {
-  color: #ffffff;
-  background-color: #d07058;
-}
-
 .submenu-item.active a {
   color: #ffffff;
+  background-color: #d07058;
 }
 
 .submenu-item a:hover {
@@ -167,12 +168,6 @@ a {
 
 .submenu-item a:active {
   background-color: #f6b5a5;
-}
-
-.submenu-item.active a:hover,
-.submenu-item.active a:focus {
-  color: #323232;
-  background-color: #fbded7;
 }
 
 .user-navigation {
@@ -322,6 +317,11 @@ a.basket-btn:focus {
   line-height: 16px;
 }
 
+.schedule-info p {
+  padding: 0;
+  margin: 0;
+}
+
 .schedule-info a {
   font-size: 22px;
   line-height: 24px;
@@ -329,12 +329,20 @@ a.basket-btn:focus {
 }
 
 .slider {
+  padding-top: 280px;
   margin-bottom: 40px;
 }
 
+.slider-item {
+  text-align: center;
+}
+
 .slider-text {
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 23px;
   padding: 0;
+  width: 670px;
+
   font-size: 60px;
   line-height: 61px;
   font-weight: 700;
@@ -344,6 +352,14 @@ a.basket-btn:focus {
   padding: 13px 39px;
   font-size: 32px;
   line-height: 44px;
+}
+
+.slider-item-2 {
+  display: none;
+}
+
+.slider-item-3 {
+  display: none;
 }
 
 .specials {
@@ -390,10 +406,10 @@ a.basket-btn:focus {
 }
 
 .catalog-item {
-  margin: 0 13px;
+  margin: 0 13px 40px;
   width: 267px;
 
-  outline: rgba(256, 218, 240 0.3);
+  text-align: center;
 }
 
 .catalog-item-image img {
@@ -432,6 +448,10 @@ a.basket-btn:focus {
 .catalog-item-title:active {
   color: #ffbc9e;
   text-decoration: underline rgba(255, 188, 158, 0.3);
+}
+
+.catalog-item-button {
+  display: none;
 }
 
 .about {
@@ -473,7 +493,7 @@ a.basket-btn:focus {
 }
 
 .new {
-  padding: 20px;
+  padding: 25px 20px;
   width: 520px;
 
   color: #323232;
@@ -483,6 +503,7 @@ a.basket-btn:focus {
 
 .new-title {
   margin: 0;
+  margin-bottom: 4px;
   padding: 0;
 
   font-size: 16px;
@@ -491,7 +512,9 @@ a.basket-btn:focus {
 }
 
 .new-link {
-  width: 280px;
+  display: block;
+  width: 285px;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -581,6 +604,7 @@ a.basket-btn:focus {
 }
 
 .contacts-info b {
+  display: block;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -638,11 +662,6 @@ a.contacts-info-btn:active {
   border-radius: 15px;
 }
 
-.modal-feedback form {
-  display: flex;
-  flex-direction: column;
-}
-
 .feedback-title {
   padding: 0;
   margin: 0;
@@ -689,7 +708,8 @@ a.contacts-info-btn:active {
 }
 
 .feedback-btn {
-  align-self: flex-end;
+  display: block;
+  margin-left: auto;
 }
 
 /*Страница каталога*/
