@@ -17,40 +17,6 @@ body {
   width: 1146px;
 }
 
-/* Временная разметка */
-
-/* body > * {
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
-} */
-
-/* body > * > * {
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
-} */
-
-/* body > * > * > * {
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-} */
-
-/* body > * > * > * > * {
-  background: rgba(0, 0, 255, 0.2);
-  box-shadow: inset 0 0 0 2px blue;
-} */
-
-body > * > * > * > * > * {
-  background: rgba(128, 0, 128, 0.2);
-  box-shadow: inset 0 0 0 2px purple;
-}
-
-body > * > * > * > * > * > * {
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-}
-
-/* Конец временной разметки */
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -118,13 +84,14 @@ li.active > a {
 }
 
 .site-navigation {
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .navigation-item > a {
   display: block;
-  padding: 10px 14px;
+  padding: 7px 14px;
   border-radius: 20px;
 }
 
@@ -155,12 +122,31 @@ li.active > a {
 
 .navigation-item {
   position: relative;
+  padding-bottom: 6px;
 }
+
+/* .navigation-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  height: 6px;
+  width: 100%;
+
+  background: transparent;
+
+  display: none;
+}
+
+.navigation-item:hover .navigation-item::after {
+  display: block;
+} */
 
 .submenu {
   position: absolute;
   left: -6px;
-  top: 40px;
+  top: 37px;
   margin: 0;
   padding: 6px 0;
   width: 143px;
@@ -183,7 +169,8 @@ li.active > a {
 .submenu a {
   position: relative;
   display: block;
-  padding: 8px 20px;
+  padding: 6px 20px;
+  margin-bottom: 3px;
   color: #323232;
 }
 
@@ -201,7 +188,8 @@ li.active > a {
 }
 
 .submenu-item:first-child a {
-  padding: 5px 20px 12px;
+  padding: 6px 20px 6px;
+  margin-bottom: 8px;
 
   font-weight: 700;
 }
@@ -211,7 +199,7 @@ li.active > a {
   position: absolute;
   width: 128px;
   height: 1px;
-  bottom: 0;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -231,6 +219,7 @@ li.active > a {
 
 .user-navigation li {
   position: relative;
+  padding-bottom: 5px;
   margin-left: 8px;
 }
 
@@ -303,6 +292,7 @@ li.active > a {
 
 .login > a,
 .basket > a {
+  display: block;
   padding: 8px 17px 8px 45px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -312,7 +302,7 @@ li.active > a {
   content: "";
   position: absolute;
   left: 18px;
-  top: -3px;
+  top: 6px;
   width: 20px;
   height: 20px;
   background: url(../img/entrance.svg) no-repeat;
@@ -326,7 +316,7 @@ li.active > a {
 .login-form {
   position: absolute;
   right: 0;
-  top: 28px;
+  top: 36px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -372,7 +362,7 @@ li.active > a {
   content: "";
   position: absolute;
   left: 18px;
-  top: -3px;
+  top: 6px;
   width: 21px;
   height: 20px;
   background: url(../img/basket.svg) no-repeat;
@@ -389,7 +379,7 @@ li.active > a {
 .modal-basket {
   position: absolute;
   right: 0;
-  top: 28px;
+  top: 36px;
   z-index: 1;
   padding: 18px 15px 20px 16px;
   width: 510px;
@@ -501,7 +491,6 @@ a.basket-btn:focus {
 }
 
 .schedule-info p {
-  padding: 0;
   margin: 0;
 }
 
@@ -525,7 +514,6 @@ a.basket-btn:focus {
 .slider-text {
   margin: 0 auto;
   margin-bottom: 29px;
-  padding: 0;
   width: 670px;
 
   font-size: 60px;
@@ -554,15 +542,18 @@ a.basket-btn:focus {
 }
 
 .special-banner {
-  width: 520px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 560px;
+  padding: 16px 20px 22px;
 
   border-radius: 15px;
 }
 
 .special-banner-title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 15px;
 
   font-size: 35px;
   line-height: 41px;
@@ -570,18 +561,25 @@ a.basket-btn:focus {
 }
 
 .special-banner-raspberry {
-  background: #931c36 url(../img/raspberry-bg.jpg) no-repeat;
+  background: #931c36 url(../img/raspberry-bg.jpg) 22% 50% no-repeat;
 }
 
 .special-banner-chocolates {
-  background: #40261a url(../img/shocolates-bg.jpg) no-repeat;
+  background: #40261a url(../img/shocolates-bg.jpg) 44% 50% no-repeat;
 }
 
 .special-banner p {
-  margin-bottom: 45px;
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
 }
 
 .special-banner-btn {
+  margin-top: 34px;
+  margin-left: auto;
   padding: 11px 23px;
 }
 
@@ -612,6 +610,10 @@ a.basket-btn:focus {
   background: url(../img/hit.svg) no-repeat;
 }
 
+a.catalog-item-image {
+  display: block;
+}
+
 .catalog-item-image img {
   margin-bottom: 7px;
 
@@ -623,7 +625,6 @@ a.basket-btn:focus {
   left: 0;
   top: 208px;
   margin: 0;
-  padding: 0;
 
   font-size: 45px;
   line-height: 45px;
@@ -637,7 +638,6 @@ a.basket-btn:focus {
 
 .catalog-item-title {
   margin: 0;
-  padding: 0;
 
   font-size: 16px;
   line-height: 22px;
@@ -671,7 +671,6 @@ a.basket-btn:focus {
 .about-title {
   margin: 0;
   margin-bottom: 7px;
-  padding: 0;
   width: 100%;
 
   font-size: 24px;
@@ -686,35 +685,20 @@ a.basket-btn:focus {
   width: 480px;
 }
 
-.about-item::before {
-  content: "";
-  position: absolute;
-  width: 49px;
-  height: 49px;
-}
-
 .about-item-icecream {
   background: url(../img/ice-cream.svg) no-repeat;
-  top: 0;
-  left: 0;
 }
 
 .about-item-cow {
   background: url(../img/cow.svg) no-repeat;
-  top: 0;
-  left: 0;
 }
 
 .about-item-leaf {
   background: url(../img/eco.svg) no-repeat;
-  top: 0;
-  left: 0;
 }
 
 .about-item-temp {
   background: url(../img/thermometer.svg) no-repeat;
-  top: 0;
-  left: 0;
 }
 
 .about-item:nth-child(odd) {
@@ -739,7 +723,6 @@ a.basket-btn:focus {
 .new-title {
   margin: 0;
   margin-bottom: 4px;
-  padding: 0;
 
   font-size: 16px;
   line-height: 22px;
@@ -764,9 +747,10 @@ a.basket-btn:focus {
 }
 
 .subscribe {
+  box-sizing: border-box;
   position: relative;
   padding: 34px 26px 40px;
-  width: 507px;
+  width: 560px;
   z-index: 1;
 
   color: #5a5a5a;
@@ -780,9 +764,8 @@ a.basket-btn:focus {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  top: 5px;
+  left: 5px;
   width: calc(100% - 10px);
   height: calc(100% - 10px);
 
@@ -791,7 +774,6 @@ a.basket-btn:focus {
 }
 
 .subscribe p {
-  padding: 0;
   margin: 0;
   margin-bottom: 35px;
 }
@@ -904,9 +886,6 @@ a.contacts-info-btn:active {
 
 .socials li {
   margin: 0 11px 10px 0;
-
-  background: rgba(0, 128, 0, 0.2);   /*Временная разметка сетки*/
-  box-shadow: 0 0 0 3px green;        /*Временная разметка сетки*/
 }
 
 .social {
@@ -964,16 +943,13 @@ a.contacts-info-btn:active {
 }
 
 .useful-info li {
-  position: relative;
   padding-left: 22px;
   margin-bottom: 3px;
   min-width: 120px;
-
-  background: rgba(0, 128, 0, 0.2);   /*Временная разметка сетки*/
-  box-shadow: 0 0 0 3px green;        /*Временная разметка сетки*/
 }
 
 .mark {
+  position: relative;
   font-weight: 700;
 }
 
@@ -994,9 +970,6 @@ a.contacts-info-btn:active {
 
   font-size: 12px;
   line-height: 18px;
-
-  background: rgba(0, 128, 0, 0.2);   /*Временная разметка сетки*/
-  box-shadow: 0 0 0 3px green;        /*Временная разметка сетки*/
 }
 
 .copyright img {
@@ -1021,7 +994,6 @@ a.contacts-info-btn:active {
 }
 
 .feedback-title {
-  padding: 0;
   margin: 0;
   margin-bottom: 27px;
 
@@ -1137,7 +1109,6 @@ a.contacts-info-btn:active {
 .catalog-filter-group {
   margin: 0;
   margin-bottom: 16px;
-  padding: 0;
   border: none;
 }
 
