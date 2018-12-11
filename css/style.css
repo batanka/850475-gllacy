@@ -1169,15 +1169,18 @@ a.contacts-info-btn:active {
   font-weight: 700;
 }
 
+/*Форма*/
+
 .catalog-filter {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 860px;
+  margin-bottom: 40px;
 
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: 500;
 }
 
@@ -1187,29 +1190,44 @@ a.contacts-info-btn:active {
   list-style: none;
 
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .catalog-filter-group {
-  margin: 0;
+  padding: 0;
   margin-bottom: 16px;
   border: none;
 }
 
 .catalog-filter-title {
   margin: 0 0 6px 16px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
 }
 
 .catalog-filter-dropdown {
-  padding: 9px 15px;
+  box-sizing: border-box;
+  width: 193px;
+  height: 36px;
+  padding: 7px 11px;
 
   color: #ffffff;
   cursor: pointer;
 }
 
+.catalog-filter-dropdown:hover,
+.catalog-filter-dropdown:focus {
+  color: #323232;
+}
+
 .range-controls {
+  box-sizing: border-box;
+  width: 218px;
+  height: 36px;
   position: relative;
-  margin-bottom: 16px;
+  padding: 16px 21px;
 }
 
 .scale {
@@ -1221,8 +1239,8 @@ a.contacts-info-btn:active {
 
 .bar {
   position: absolute;
-  top: 0;
-  left: 16px;
+  top: 15px;
+  left: 42px;
   width: 106px;
   height: 4px;
 
@@ -1231,7 +1249,7 @@ a.contacts-info-btn:active {
 
 .range-toggle {
   position: absolute;
-  top: -8px;
+  top: 7px;
   width: 4px;
   height: 4px;
   background-color: #ababab;
@@ -1242,11 +1260,11 @@ a.contacts-info-btn:active {
 }
 
 .range-toggle-min {
-  left: 16px;
+  left: 34px;
 }
 
 .range-toggle-max {
-  left: 123px;
+  left: 133px;
 }
 
 .catalog-filter-list {
@@ -1262,17 +1280,27 @@ a.contacts-info-btn:active {
   cursor: pointer;
 }
 
-.catalog-radio-item,
+.catalog-radio-item {
+  position: relative;
+  margin-right: 17px;
+  padding: 9px 0;
+}
+
 .catalog-chekbox-item {
   position: relative;
-  margin-right: 22px;
+  margin-right: 21px;
   padding: 9px 0;
+}
+
+.catalog-radio-item:last-child,
+.catalog-chekbox-item:last-child {
+  margin-right: 0;
 }
 
 .catalog-radio-item .catalog-filter-label::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 0;
   width: 25px;
   height: 25px;
@@ -1282,25 +1310,36 @@ a.contacts-info-btn:active {
   opacity: 0.8;
 }
 
+.catalog-radio-item input:checked + .catalog-filter-label:before {
+  background: url(../img/radio-on.svg) no-repeat;
+}
+
 .catalog-chekbox-item .catalog-filter-label::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 7px;
   left: 0;
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
 
   background: url(../img/checkbox-off.svg) no-repeat;
+  transform: scale(0.87);
   opacity: 0.8;
 }
 
+.catalog-chekbox-item input:checked + .catalog-filter-label::before {
+  width: 27px;
+  background: url(../img/checkbox-on.svg) no-repeat;
+}
+
 .catalog-filter-btn {
-  padding: 9px 26px;
+  padding: 8px 26px;
 
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #ffffff;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .catalog-filter-btn:hover,
@@ -1318,6 +1357,8 @@ a.contacts-info-btn:active {
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 
   font-size: 16px;
   line-height: 18px;
@@ -1326,19 +1367,31 @@ a.contacts-info-btn:active {
   list-style: none;
 }
 
-/* .pagination-button.forward {
+.pagination-button {
   display: block;
   width: 8px;
   height: 12px;
+  margin: 0 24px;
 
   background: url(../img/icon-right-small.svg) no-repeat;
-} */
+  cursor: pointer;
+}
+
+.pagination-button.prev {
+  transform: rotate(180deg);
+}
+
+.pagination-button.prev.disabled {
+  opacity: 0.2;
+}
 
 .pagination-item a {
+  display: block;
   padding: 7px 10px;
 
   background-color: rgba(255, 255, 255, 0);
   text-decoration: none;
+  border-radius: 50%;
 }
 
 .pagination-item.active a {
