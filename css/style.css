@@ -192,6 +192,7 @@ li.active > a {
 
   padding: 8px 20px;
   color: #323232;
+  text-decoration: none;
 }
 
 .submenu-item.active a {
@@ -255,7 +256,8 @@ li.active > a {
   border-radius: 50%;
 }
 
-.search:hover a {
+.search a:hover,
+.search a:focus {
   background: rgba(248, 247, 244, 1) url(../img/loupe-hover.svg) center center no-repeat;
 }
 
@@ -544,9 +546,11 @@ a.basket-btn:focus {
 .schedule-info a {
   display: inline-block;
   margin-top: 3px;
+
   font-size: 22px;
   line-height: 24px;
   text-decoration: none;
+  vertical-align: top;
 }
 
 .slider {
@@ -576,6 +580,10 @@ a.basket-btn:focus {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background-color: rgb(255, 255, 255, 0.4);
 }
 
 .slider-item {
@@ -766,6 +774,7 @@ a.basket-btn:focus {
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -1051,7 +1060,6 @@ a.contacts-info-btn:active {
   opacity: 0.8;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-
 }
 
 .social-tw {
@@ -1133,24 +1141,39 @@ a.contacts-info-btn:active {
 }
 
 .modal-feedback {
-  display: none;
   position: fixed;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px 24px;
+  padding: 16px 24px 27px;
   width: 430px;
-  z-index: 1;
+  z-index: 11;
 
   color: #323232;
 
   background-color: #f8f7f4;
   border-radius: 15px;
+
+   display: none;
+}
+
+.content-wrapper::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  display: none;
 }
 
 .feedback-title {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
 
   font-size: 24px;
   line-height: 28px;
@@ -1160,7 +1183,7 @@ a.contacts-info-btn:active {
 .modal-feedback input,
 .modal-feedback textarea {
   box-sizing: border-box;
-  padding: 15px;
+  padding: 9px 15px;
 
   border: 1px solid #d3d3d2;
   border-radius: 5px;
@@ -1173,7 +1196,7 @@ a.contacts-info-btn:active {
 }
 
 .modal-feedback textarea {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   resize: none;
   width: 428px;
   height: 155px;
@@ -1182,19 +1205,54 @@ a.contacts-info-btn:active {
 .modal-feedback input:hover,
 .modal-feedback textarea:hover {
   border: 2px solid #c7c6c5;
-  padding: 14px;
+  padding: 8px 14px;
 }
 
 .modal-feedback input:focus,
 .modal-feedback textarea:focus {
   outline: none;
   border: 2px solid #8fbdec;
-  padding: 14px;
+  padding: 8px 14px;
 }
 
 .feedback-btn {
   display: block;
   margin-left: auto;
+  padding: 10px 23px;
+}
+
+.feedback-close {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  width: 18px;
+  height: 18px;
+
+  font-size: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.feedback-close::before,
+.feedback-close::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+
+  background-color: #231f20;
+}
+
+.feedback-close::before {
+  transform: rotate(45deg);
+}
+
+.feedback-close::after {
+  transform: rotate(-45deg);
 }
 
 /*Страница каталога*/
@@ -1215,6 +1273,8 @@ a.contacts-info-btn:active {
   position: relative;
   display: inline-block;
   padding-right: 18px;
+
+  vertical-align: top;
 }
 
 .breadcrumbs-item::after {
@@ -1333,6 +1393,10 @@ a.contacts-info-btn:active {
   cursor: pointer;
 }
 
+.range-toggle:hover {
+  transform: scale(1.1);
+}
+
 .range-toggle-min {
   left: 34px;
 }
@@ -1399,6 +1463,20 @@ a.contacts-info-btn:active {
   display: none
 }
 
+.catalog-radio-item:hover .catalog-filter-label::before,
+.catalog-radio-item:hover .catalog-filter-label::after {
+  opacity: 1;
+}
+
+.catalog-radio-item input:focus + .catalog-filter-label::before {
+  outline: 1px solid #1e90ff;
+}
+
+.catalog-radio-item input:disabled + .catalog-filter-label::before,
+.catalog-radio-item input:disabled + .catalog-filter-label::after {
+  opacity: 0.4;
+}
+
 .catalog-radio-item input:checked + .catalog-filter-label::after {
   display: block;
 }
@@ -1420,6 +1498,18 @@ a.contacts-info-btn:active {
   width: 24px;
   background: url(../img/checkbox-on.svg) no-repeat;
   background-size: cover;
+}
+
+.catalog-chekbox-item:hover .catalog-filter-label::before {
+  opacity: 1;
+}
+
+.catalog-chekbox-item input:focus + .catalog-filter-label::before {
+  outline: 1px solid #1e90ff;
+}
+
+.catalog-chekbox-item input:disabled + .catalog-filter-label::before {
+  opacity: 0.4;
 }
 
 .catalog-filter-btn {
