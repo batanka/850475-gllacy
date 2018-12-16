@@ -1,3 +1,32 @@
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
 html, body {
   min-width: 1200px;;
 }
@@ -368,7 +397,8 @@ li.active > a {
 .login-links a {
   font-size: 13px;
   line-height: 24px;
-  text-decoration: underline rgba(50, 50, 50, 0.3);
+  text-decoration: underline;
+  text-decoration-color: rgba(50, 50, 50, 0.3);
   color: #323232;
 }
 
@@ -406,7 +436,7 @@ li.active > a {
   box-sizing: border-box;
   width: 540px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
   color: #323232;
   font-size: 13px;
@@ -508,9 +538,11 @@ td.basket-order-remove {
 
 .basket-total {
   display: block;
+  width: 100%;
   margin-bottom: 14px;
   margin-left: auto;
 
+  text-align: right;
   font-size: 15px;
   line-height: 18px;
 }
@@ -583,7 +615,7 @@ a.basket-btn:focus {
 }
 
 .slider-controls label:hover {
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .slider-item {
@@ -594,7 +626,7 @@ a.basket-btn:focus {
 .slider-text {
   margin: 0 auto;
   margin-bottom: 29px;
-  width: 680px;
+  width: 684px;
 
   font-size: 60px;
   line-height: 61px;
@@ -643,7 +675,7 @@ a.basket-btn:focus {
 
 .special-banner {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 560px;
   padding: 16px 20px 22px;
@@ -654,6 +686,7 @@ a.basket-btn:focus {
 .special-banner-title {
   margin: 0;
   margin-bottom: 15px;
+  width: 100%;
 
   font-size: 35px;
   line-height: 41px;
@@ -671,6 +704,7 @@ a.basket-btn:focus {
 .special-banner p {
   margin: 0;
   margin-bottom: 10px;
+  width: 100%;
 
   font-size: 18px;
   line-height: 22px;
@@ -1155,10 +1189,15 @@ a.contacts-info-btn:active {
   background-color: #f8f7f4;
   border-radius: 15px;
 
-   display: none;
+  animation: zoomIn 0.6s;
+  display: none;
 }
 
-.content-wrapper::before {
+.modal-feedback-show {
+  display: block;
+}
+
+.modal-feedback-wrapper {
   content: "";
   background: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -1168,7 +1207,7 @@ a.contacts-info-btn:active {
   bottom: 0;
   z-index: 10;
 
-  display: none;
+  transition: 0.4s;
 }
 
 .feedback-title {
@@ -1348,12 +1387,16 @@ a.contacts-info-btn:active {
   -webkit-appearance: none;
 
   color: #ffffff;
+
+  background: url(../img/icon-down-dir.svg) no-repeat 93% center;
   cursor: pointer;
 }
 
 .catalog-filter-dropdown:hover,
 .catalog-filter-dropdown:focus {
   color: #323232;
+
+  background: url(../img/icon-down-dir-hover.svg) no-repeat 93% center;
 }
 
 .range-controls {
