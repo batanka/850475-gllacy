@@ -218,13 +218,13 @@
         <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
         <form action="https://echo.htmlacademy.ru" method="POST">
           <label class="visually-hidden" for="name-field">Ваше имя</label>
-          <input type="text" name="name" id="name-field" placeholder="Как вас зовут?">
+          <input type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
 
           <label class="visually-hidden" for="feedback-email-field">Ваш адрес электронной почты</label>
-          <input type="text" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа?">
+          <input type="text" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа?" required>
 
           <label class="visually-hidden" for="comment-field">Оставьте комментарий</label>
-          <textarea name="comment" id="comment-field" placeholder="Напишите что-нибудь..."></textarea>
+          <textarea name="comment" id="comment-field" placeholder="Напишите что-нибудь..." required></textarea>
 
           <button class="button feedback-btn" type="submit">Отправить</button>
         </form>
