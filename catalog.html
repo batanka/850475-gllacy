@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize-min.css">
   <link rel="stylesheet" href="css/style-min.css">
   <title>Каталог магазина Глейси</title>
 </head>
@@ -20,7 +21,7 @@
           </a>
           <ul class="site-navigation">
             <li class="navigation-item active">
-              <a>Каталог</a>
+              <a aria-haspopup="true" tabindex="0">Каталог</a>
               <ul class="submenu">
                 <li class="submenu-item"><a href="#">Новинки</a></li>
                 <li class="submenu-item active"><a>Сливочное</a></li>
@@ -35,14 +36,14 @@
 
           <ul class="user-navigation">
             <li class="search">
-              <a href="search.html" aria-label="Поиск по сайту"></a>
+              <a href="search.html" aria-label="Поиск по сайту" aria-haspopup="true"></a>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
                 <label class="visually-hidden" for="search-field">Поиск, введите запрос</label>
                 <input type="text" name="search" id="search-field" placeholder="Что ищем?">
               </form>
             </li>
             <li class="login">
-              <a href="login.html">Вход</a>
+              <a href="login.html" aria-haspopup="true">Вход</a>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
                 <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
                 <input type="text" name="email" id="email-field" placeholder="Электронная почта" required>
