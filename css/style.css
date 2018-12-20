@@ -248,6 +248,7 @@ li.active > a {
 .user-navigation a:focus {
   color: #323232;
   background-color: #f8f7f4;
+  outline: none;
 }
 
 .logo {
@@ -1117,6 +1118,7 @@ a.basket-btn:focus {
 .new-link:focus,
 .new-link:active {
   color: #e84d37;
+  outline: none;
 }
 
 .subscribe {
