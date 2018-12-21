@@ -126,9 +126,10 @@ img {
 }
 
 .inner-wrapper {
-  min-width: 1200px;
-
   background-color: #849d8f;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0, transparent 600px);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0, transparent 600px);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0, transparent 600px);
 }
 
 .content-wrapper {
@@ -153,7 +154,6 @@ a {
   -webkit-text-decoration: underline rgba(255, 255, 255, 0.2);
           text-decoration: underline rgba(255, 255, 255, 0.2);
 }
-
 
 .button {
   display: inline-block;
@@ -218,6 +218,7 @@ li.active > a {
 
 .site-navigation {
   padding-top: 9px;
+  width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,11 +342,17 @@ li.active > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
   padding: 23px 0 14px;
+  width: 290px;
 
   font-size: 14px;
   line-height: 16px;
@@ -512,6 +519,17 @@ li.active > a {
 
 .basket:not(.active) > a {
   pointer-events: none;
+}
+
+.basket:not(.active) > a:focus {
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 1px solid #1e90ff;
+}
+
+.basket.active a:focus {
+  outline: 1px solid #1e90ff;
 }
 
 .modal-basket {
@@ -785,10 +803,12 @@ a.basket-btn:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .special-banner {
@@ -801,6 +821,7 @@ a.basket-btn:focus {
           box-sizing: border-box;
   width: 560px;
   padding: 16px 20px 23px 19px;
+  margin-bottom: 20px;
 
   border-radius: 15px;
 }
@@ -856,13 +877,16 @@ a.basket-btn:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 
   margin: 0 13px;
   width: 267px;
@@ -892,6 +916,7 @@ a.basket-btn:focus {
 }
 
 .catalog-item-price span {
+  position: relative;
   padding-left: 36px;
 
   font-size: 30px;
@@ -902,7 +927,7 @@ a.basket-btn:focus {
   content: "";
   position: absolute;
   right: 41px;
-  top: 6px;
+  top: -4px;
   width: 30px;
   height: 32px;
 
@@ -936,6 +961,7 @@ a.basket-btn:focus {
 }
 
 .catalog-item-btn {
+  margin: auto auto 0;
   padding: 10px 17px;
   z-index: 2;
 
@@ -966,7 +992,10 @@ a.basket-btn:focus {
 }
 
 .catalog-item:hover,
-.catalog-item:focus,
+.catalog-item:focus {
+  z-index: 3;
+}
+
 .catalog-item:focus-within {
   z-index: 3;
 }
@@ -1079,14 +1108,17 @@ a.basket-btn:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .new {
   padding: 22px 20px;
+  margin-bottom: 20px;
   width: 520px;
 
   color: #323232;
@@ -1126,6 +1158,7 @@ a.basket-btn:focus {
           box-sizing: border-box;
   position: relative;
   padding: 33px 26px 42px;
+  margin-bottom: 20px;
   width: 560px;
   z-index: 1;
 
@@ -1196,6 +1229,9 @@ a.basket-btn:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1536,13 +1572,10 @@ a.contacts-info-btn:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
+   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 860px;
+  width: 875px;
   margin-bottom: 24px;
 
   font-size: 16px;
@@ -1561,10 +1594,10 @@ a.contacts-info-btn:active {
 
 .catalog-filter-group {
   padding: 0;
-  margin: 0;
-  margin-bottom: 16px;
+  margin: 0 15px 16px 0;
   border: none;
 }
+
 
 .catalog-filter-title {
   margin: 0 0 6px 15px;
