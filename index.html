@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <input class="visually-hidden" type="radio" id="slide-1" name="slider" checked>
-  <input class="visually-hidden" type="radio" id="slide-2" name="slider">
-  <input class="visually-hidden" type="radio" id="slide-3" name="slider">
+  <input class="visually-hidden slider-input-1" type="radio" id="slide-1" name="slider" checked>
+  <input class="visually-hidden slider-input-2" type="radio" id="slide-2" name="slider">
+  <input class="visually-hidden slider-input-3" type="radio" id="slide-3" name="slider">
 
   <div class="page-wrapper">
     <div class="content-wrapper">
@@ -50,7 +50,7 @@
               <a href="login.html" aria-haspopup="true">Вход</a>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
                 <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
-                <input type="text" name="email" id="email-field" placeholder="Электронная почта" required>
+                <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
                 <label class="visually-hidden" for="password-field">Введите пароль</label>
                 <input type="password" name="password" id="password-field" placeholder="Пароль" required>
                 <button class="button login-btn" type="submit">Войти</button>
@@ -219,13 +219,13 @@
         <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
         <form action="https://echo.htmlacademy.ru" method="POST">
           <label class="visually-hidden" for="name-field">Ваше имя</label>
-          <input type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
+          <input type="text" name="feedback-name" id="name-field" placeholder="Как вас зовут?">
 
           <label class="visually-hidden" for="feedback-email-field">Ваш адрес электронной почты</label>
-          <input type="text" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа?" required>
+          <input type="email" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа?">
 
           <label class="visually-hidden" for="comment-field">Оставьте комментарий</label>
-          <textarea name="comment" id="comment-field" placeholder="Напишите что-нибудь..." required></textarea>
+          <textarea name="feedback-comment" id="comment-field" placeholder="Напишите что-нибудь..."></textarea>
 
           <button class="button feedback-btn" type="submit">Отправить</button>
         </form>

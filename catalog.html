@@ -46,7 +46,7 @@
               <a href="login.html" aria-haspopup="true">Вход</a>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
                 <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
-                <input type="text" name="email" id="email-field" placeholder="Электронная почта" required>
+                <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
                 <label class="visually-hidden" for="password-field">Введите пароль</label>
                 <input type="password" name="password" id="password-field" placeholder="Пароль" required>
                 <button class="button login-btn" type="submit">Войти</button>
@@ -133,22 +133,22 @@
               <legend class="catalog-filter-title">Жирность:</legend>
               <ul class="catalog-filter-list catalog-radio-list">
                 <li class="catalog-radio-item">
-                  <input class="visually-hidden" type="radio" name="fat" id="zero" value="0">
+                  <input class="visually-hidden catalog-radio-input" type="radio" name="fat" id="zero" value="0">
                   <label class="catalog-filter-label" for="zero">0%</label>
                 </li>
 
                 <li class="catalog-radio-item">
-                  <input class="visually-hidden" type="radio" name="fat" id="ten" value="10" checked>
+                  <input class="visually-hidden catalog-radio-input" type="radio" name="fat" id="ten" value="10" checked>
                   <label class="catalog-filter-label" for="ten">до 10%</label>
                 </li>
 
                 <li class="catalog-radio-item">
-                  <input class="visually-hidden" type="radio" name="fat" id="under-30" value="<30">
+                  <input class="visually-hidden catalog-radio-input" type="radio" name="fat" id="under-30" value="<30">
                   <label class="catalog-filter-label" for="under-30">до 30%</label>
                 </li>
 
                 <li class="catalog-radio-item">
-                  <input class="visually-hidden" type="radio" name="fat" id="more-30" value=">30">
+                  <input class="visually-hidden catalog-radio-input" type="radio" name="fat" id="more-30" value=">30">
                   <label class="catalog-filter-label" for="more-30">выше 30%</label>
                 </li>
               </ul>
@@ -158,27 +158,27 @@
               <legend class="catalog-filter-title">Наполнители:</legend>
               <ul class="catalog-filter-list catalog-checkbox-list">
                 <li class="catalog-chekbox-item">
-                  <input class="visually-hidden" type="checkbox" name="chocolate-filler" id="chocolate" checked>
+                  <input class="visually-hidden catalog-checkbox-input" type="checkbox" name="chocolate-filler" id="chocolate" checked>
                   <label class="catalog-filter-label" for="chocolate">шоколадные</label>
                 </li>
 
                 <li class="catalog-chekbox-item">
-                  <input class="visually-hidden" type="checkbox" name="sugar-filler" id="sugar" checked>
+                  <input class="visually-hidden catalog-checkbox-input" type="checkbox" name="sugar-filler" id="sugar" checked>
                   <label class="catalog-filter-label" for="sugar">сахарные присыпки</label>
                 </li>
 
                 <li class="catalog-chekbox-item">
-                  <input class="visually-hidden" type="checkbox" name="fruits-filler" id="fruits">
+                  <input class="visually-hidden catalog-checkbox-input" type="checkbox" name="fruits-filler" id="fruits">
                   <label class="catalog-filter-label" for="fruits">фрукты</label>
                 </li>
 
                 <li class="catalog-chekbox-item">
-                  <input class="visually-hidden" type="checkbox" name="syrup-filler" id="syrup">
+                  <input class="visually-hidden catalog-checkbox-input" type="checkbox" name="syrup-filler" id="syrup">
                   <label class="catalog-filter-label" for="syrup">сиропы</label>
                 </li>
 
                 <li class="catalog-chekbox-item">
-                  <input class="visually-hidden" type="checkbox" name="jam-filler" id="jam">
+                  <input class="visually-hidden catalog-checkbox-input" type="checkbox" name="jam-filler" id="jam">
                   <label class="catalog-filter-label" for="jam">джемы</label>
                 </li>
               </ul>
