@@ -752,7 +752,7 @@ a.basket-btn:focus {
 }
 
 .schedule-info a {
-  display: inline-block;
+  display: block;
   margin-top: 3px;
 
   font-size: 22px;
@@ -1321,6 +1321,11 @@ a.basket-btn:focus {
 .contacts-info p {
   margin: 0;
   margin-bottom: 19px;
+}
+
+.contacts-info span {
+  display: block;
+  width: 155px;
 }
 
 .contacts-info b {
